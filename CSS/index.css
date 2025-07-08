@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    margin: 2rem auto;
+    width: 75%;
+}
+
+h1 {
+    color: #1e90ff;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #eee;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+}
+
+.form input::placeholder {
+    color: black;
+}
+
+.form input[type="text"] {
+    width: 70%;
+    padding: 0.8rem 0.5rem;
+    border-radius: 0.6rem;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+
+.form input[type="submit"] {
+    padding: 1rem 1.8rem;
+    border-radius: 0.6rem;
+    border: none;
+    outline: none;
+    background-color: #1e90ff;
+    color: #fff;
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.form input[type="submit"]:hover,
+.task input[type="button"]:hover {
+    background-color: #1e8fffef;
+    cursor: pointer;
+}
+
+/* ************************************************* */
+.tasks {
+    margin-top: 1rem;
+    background-color: #eee;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+input[type="button"] {
+    padding: 1rem 1.2rem;
+    border-radius: 0.6rem;
+    border: none;
+    outline: none;
+    background-color: #1e90ff;
+    color: #fff;
+    font-size: 18px;
+}
+
+.task input[value="Toggle"] {
+    margin-right: 20px;
+}
+
+.task input[value="Delete"] {
+    background-color: #dc143c;
+}
+
+.task input[value="Delete"]:hover {
+    background-color: #dc143cdb
+}
+
+.task h2 {
+    width: 70%;
+    padding: 0.8rem 0.5rem;
+    border-radius: 0.6rem;
+    background-color: #fff;
+}
+
+.task h2.toggle {
+    text-decoration: line-through;
+    color: #1e90ff;
+}
+
+.empty-value {
+    text-align: center;
+    color: #ed3f62;
+    font-size: 20px;
+}
+
+/* ******************************************************************* */
+/** Reaponsive */
+
+/**  Specials */
+@media (max-width:1060px) {
+    section {
+        width: 80%;
+    }
+
+    .form input[type="text"],
+    .task h2 {
+        width: 55%;
+    }
+
+    input[type="button"],
+    .form input[type="submit"] {
+        padding: 0.8rem 1rem;
+    }
+}
+
+/** Tablets Screen */
+@media (max-width:774px) {
+
+    .task,
+    .form {
+        flex-direction: column;
+    }
+
+    .form input[type="text"],
+    .task h2 {
+        width: 100%;
+        margin-bottom: 8px;
+        font-size: 18px;
+    }
+
+    input[type="button"],
+    .form input[type="submit"] {
+        padding: 0.8rem 1rem;
+        font-size: 18px;
+    }
+
+    .task .task-action {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+/** SmartPhones Screen */
+@media (max-width:472px) {
+
+    .form input[type="text"],
+    .task h2 {
+        font-size: 15px;
+    }
+
+    input[type="button"],
+    .form input[type="submit"] {
+        font-size: 15px;
+    }
+}
+
+/** Smart Watch Screen */
+@media (max-width:200px) {
+    h1 {
+        font-size: 14px;
+    }
+
+    .form input[type="text"],
+    .form input[type="text"] {
+        font-size: 11px;
+    }
+
+    .task h2 {
+        text-align: center;
+    }
+
+    input[type="button"],
+    .form input[type="submit"] {
+        font-size: 10px;
+        padding: 0.5rem 0.5rem;
+    }
+
+    .tasks {
+        padding: 10px 10px;
+    }
+}
